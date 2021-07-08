@@ -21,7 +21,7 @@ body {
 .nav-bar {
     width: 100%;
     display: inline-block;
-    background-color: #1C539F;
+    background-color: #212329;
     font-family: "Roboto", serif;
     font-weight: 700 !important;
     padding: 10px 0;
@@ -34,18 +34,19 @@ body {
 }
 
 .nav-menu {
-    width: 500px;
+    /* width: 500px; */
     display: flex;
     justify-content: space-between;
 }
 
 .nav-menu a {
-    color: white;
+    color: #f5f5f5;
     text-decoration: none;
     font-size: 28px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 15px;
 }
 
 .nav-menu a:hover {
@@ -55,8 +56,10 @@ body {
 body.about header div div a.about,
 body.portfolio header div div a.portfolio,
 body.resume header div div a.resume,
-body.contact header div div a.contact {
-    color: black;
+body.contact header div div a.contact,
+body.register-page header div div a.register,
+body.login-page header div div a.login {
+    color: #efb94c;
 }
 
 .nav-content .logo-touch-target {
@@ -116,7 +119,7 @@ body.contact header div div a.contact {
 .profile h1 {
     font-size: 50px;
     font-weight: 700;
-    color: white;
+    color: #f5f5f5;
 }
 
 .profile img {
