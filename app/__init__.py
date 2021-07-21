@@ -108,7 +108,9 @@ def send_email():
 
 @app.route("/health")
 def health():
-    return render_template("health.html", title="Health", url=os.getenv("URL"))
+    userinDB = UserModel.query.filter_by(username="").first()
+    has_userinDB = "yes" if userinDB is not None else "no"
+    return f"Works, user is in database: {has_userinDB}"
 
 
 @app.route("/register", methods=["GET", "POST"])
