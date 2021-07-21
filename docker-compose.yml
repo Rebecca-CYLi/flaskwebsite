@@ -16,6 +16,8 @@ services:
     restart: always
     env_file:
       - .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
   nginx:
     container_name: nginx
     image: jonasal/nginx-certbot:latest
