@@ -10,6 +10,7 @@ services:
       - .:/myportfolio
     depends_on:
       - db
+
   db:
     container_name: db
     image: postgres
@@ -17,7 +18,7 @@ services:
     env_file:
       - .env
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - mypostgresdb:/var/lib/postgresql/data
 
   nginx:
     container_name: nginx
@@ -47,5 +48,5 @@ services:
       - /var/lib/docker/:/var/lib/docker:ro
 
 volumes:
+  mypostgresdb:
   nginx_secrets:
-  postgres_data:
