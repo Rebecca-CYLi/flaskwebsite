@@ -18,6 +18,7 @@ services:
       - .env
     volumes:
       - postgres_data:/var/lib/postgresql/data
+
   nginx:
     container_name: nginx
     image: jonasal/nginx-certbot:latest
@@ -47,3 +48,4 @@ services:
 
 volumes:
   nginx_secrets:
+  postgres_data:
